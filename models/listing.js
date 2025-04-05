@@ -28,10 +28,10 @@ const listingSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "User",
   },
-  geometry: {
+ geometry: {
     type: {
       type: String,
-      enum: ['Point],
+      enum: ['Point'],
       required : true
     },
     coordinates: {
