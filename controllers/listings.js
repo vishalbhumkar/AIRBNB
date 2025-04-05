@@ -36,15 +36,12 @@ module.exports.renderNewForm = (req,res) => {
 //    create route
 
 module.exports.createListing = async (req,res , next) => {
-  let response = await geocodingClient
-  .forwardGeocode({
+  let response = await geocodingClient.forwardGeocode({
   query: req.body.listing.location,
   limit: 1,
 })
 .send();
-
-
-
+  
    let url = req.file.path;
    let filename = req.file.filename;
    const newListing = new Listing(req.body.listing);
